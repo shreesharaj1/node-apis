@@ -1,0 +1,58 @@
+# PROJECT #
+###########
+node_modules/
+lib/
+dist/
+jest/
+dist-release/
+prod/
+docs/
+node_modules/
+*.map
+.vscode/
+
+# TESTS #
+#########
+dashboard/
+coverage/
+bdd/tests/acceptance/wdio/utilities/output/
+bdd/tests/acceptance/wdio/screenshots
+bdd/reports/html_report/**/*
+bdd/reports/cucumber/**/*
+junitresults.xml
+
+# LOGS #
+########
+seleniumLog*.*
+npm-debug.log
+*.log
+*.orig
+
+# SASS #
+########
+.sass-cache
+*.scssc
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+*.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
+.nyc_output
+
+# IDEs #
+#################
+*.sublime-*
+nbproject/
+*.iml
+.idea
+
+# SONAR #
+#################
+*.properties
+.sonar
+.history

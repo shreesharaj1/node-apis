@@ -2,7 +2,7 @@
   "name": "apis",
   "version": "1.0.0",
   "description": "REST APIs",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/shreesharaj1/node-apis#readme",
   "dependencies": {
+    "crawler": "^1.2.0",
     "express": "^4.16.4",
+    "formidable": "^1.2.1",
     "fs": "0.0.1-security"
   }
 }

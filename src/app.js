@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3003
-
-
+var formidable = require('formidable');
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
@@ -51,4 +50,24 @@ app.get('/non-repeat-char', (request, response) => {
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.write(result);
     response.end();
+});
+
+app.get('/', function (req, res){
+    res.sendFile(__dirname + '/index.html');
+});
+
+app.post('/file-upload', function (req, res){
+    var form = new formidable.IncomingForm();
+
+    form.parse(req);
+
+    form.on('fileBegin', function (name, file){
+        file.path = __dirname + '/uploads/' + file.name;
+    });
+
+    form.on('file', function (name, file){
+        console.log('Uploaded ' + file.name);
+    });
+
+    res.sendFile(__dirname + '/index.html');
 });
